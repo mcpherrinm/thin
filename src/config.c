@@ -12,6 +12,7 @@ void config_init() {
     persist_write_bool(PERSIST_KEY_BT, true);
     persist_write_bool(PERSIST_KEY_BATTERY, true);
     persist_write_bool(PERSIST_KEY_SECOND_HAND, true);
+    persist_write_bool(PERSIST_KEY_BT_VIBE, true);
   }
 
   for(int i = 0; i < NUM_SETTINGS; i++) {

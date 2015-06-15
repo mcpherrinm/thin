@@ -233,7 +233,7 @@ static void draw_proc(Layer *layer, GContext *ctx) {
 
 static void bt_handler(bool connected) {
   // Notify disconnection
-  if(!connected && s_connected) {
+  if(!connected && s_connected && config_get(PERSIST_KEY_BT_VIBE)) {
     vibes_long_pulse();
   }
 

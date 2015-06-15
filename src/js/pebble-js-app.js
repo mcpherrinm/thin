@@ -15,6 +15,7 @@ Pebble.addEventListener('webviewclosed', function(e) {
     "PERSIST_KEY_DATE": '' + json.date,
     "PERSIST_KEY_DAY": '' + json.day,
     "PERSIST_KEY_BT": '' + json.bluetooth,
+    "PERSIST_KEY_BT_VIBE": '' + json.bluetooth_vibe,
     "PERSIST_KEY_BATTERY": '' + json.battery,
     "PERSIST_KEY_SECOND_HAND": '' + json.second_hand,
   };

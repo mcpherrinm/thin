@@ -13,6 +13,7 @@
       <tr><td>Show weekday/month</td><td><input id='check_date' type='checkbox'/></tr>
       <tr><td>Show day of month</td><td><input id='check_day' type='checkbox'/></tr>
       <tr><td>Show disconnected indicator</td><td><input id='check_bluetooth' type='checkbox'/></td></tr>
+      <tr><td>Vibrate on disconnect</td><td><input id='check_bluetooth_vibe' type='checkbox'/></td></tr>
       <tr><td>Show battery level </td><td><input id='check_battery' type='checkbox'/></tr>
       <tr><td>Show second hand</td><td><input id='check_second_hand' type='checkbox'/></tr>
     </table>
@@ -54,6 +55,7 @@
           persistWrite('date', 'true');
           persistWrite('day', 'true');
           persistWrite('bluetooth', 'true');
+          persistWrite('bluetooth_vibe', 'true');
           persistWrite('battery', 'true');
           persistWrite('second_hand', 'true');
         }
@@ -63,6 +65,7 @@
         document.getElementById('check_date').checked = persistRead('date', 'false') === 'true';
         document.getElementById('check_day').checked = persistRead('day', 'false') === 'true';
         document.getElementById('check_bluetooth').checked = persistRead('bluetooth', 'false') === 'true';
+        document.getElementById('check_bluetooth_vibe').checked = persistRead('bluetooth_vibe', 'false') === 'true';
         document.getElementById('check_battery').checked = persistRead('battery', 'false') === 'true';
         document.getElementById('check_second_hand').checked = persistRead('second_hand', 'false') === 'true';
       }
@@ -101,6 +104,7 @@
             'date': document.getElementById('check_date').checked ? 'true' : 'false',
             'day': document.getElementById('check_day').checked ? 'true' : 'false',
             'bluetooth': document.getElementById('check_bluetooth').checked ? 'true' : 'false',
+            'bluetooth_vibe': document.getElementById('check_bluetooth_vibe').checked ? 'true' : 'false',
             'battery': document.getElementById('check_battery').checked ? 'true' : 'false',
             'second_hand': document.getElementById('check_second_hand').checked ? 'true' : 'false'
           };  
@@ -109,6 +113,7 @@
           persistWrite('date', options.date);
           persistWrite('day', options.day);
           persistWrite('bluetooth', options.bluetooth);
+          persistWrite('bluetooth_vibe', options.bluetooth_vibe);
           persistWrite('battery', options.battery);
           persistWrite('second_hand', options.second_hand);
 
